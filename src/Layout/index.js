@@ -13,16 +13,13 @@ import EditDeck from "./Deck/EditDeck";
 function Layout() {
   return (
    <>
-   <div>
-     Hello World!
-   </div>
       <Header />
       <div className="container">
         <Switch>
         <Route exact path="/">
           <DeckList />
         </Route>
-        {/* <Route path='/decks/:deckId/study'>
+        <Route path='/decks/:deckId/study'>
           <StudyPage />
         </Route>
         <Route path='/decks/new'>
@@ -39,7 +36,7 @@ function Layout() {
           </Route>
         <Route path="/decks/:deckId">
           <ViewDeck />
-        </Route> */}
+        </Route>
         <Route>
           <NotFound />
         </Route>
