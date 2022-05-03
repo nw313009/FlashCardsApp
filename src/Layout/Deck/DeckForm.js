@@ -14,7 +14,7 @@ export default function DeckForm({form, handleCancel, handleChange, handleSubmit
       </nav>
       <h2>{title} Deck</h2>
       <div className="form-group">
-        <form handleSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
           <div>
             <input

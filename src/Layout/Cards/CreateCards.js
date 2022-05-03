@@ -22,14 +22,14 @@ const [form, setForm] = useState(initialFormState);
     setForm({ ...form, [target.name]: target.value });
   };
 
-  const handleSave = (event) => {
+  const handleSave = async (event) => {
     event.preventDefault();
     console.log(form)
     async function fetchCard() {
       const response = await createCard(deckId, form);
       setForm(response);
     }
-    fetchCard();
+   await fetchCard();
     history.push(`/decks/${deckId}`);
   };
   const handleDone = (event) => {

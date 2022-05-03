@@ -11,7 +11,7 @@ export default function CreateDeck() {
     description: "",
   };
 
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState(initialFormState);
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value });
@@ -21,7 +21,7 @@ export default function CreateDeck() {
     event.preventDefault();
     async function fetchDeck() {
       const response = await createDeck(form);
-      setForm({ initialFormState });
+      setForm(initialFormState);
       history.push(`/decks/${response.id}`);
     }
     fetchDeck();
